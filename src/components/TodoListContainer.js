@@ -8,6 +8,8 @@ const mapStateToProps = (state) => {
   };
 };
 
+// the todo item dispatch is handled through the TodoListContainer
+// cause we let the Todo component onClick event call the parent, TodoListprops function: onTodoClick
 const mapDispatchToProps = (dispatch) => {
   return {
     onTodoClick: (id) => {

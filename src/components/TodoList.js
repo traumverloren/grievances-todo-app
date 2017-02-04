@@ -6,6 +6,7 @@ const TodoList = ({todos, onTodoClick}) => {
     <div>
     <ul>
       {todos.map(todo =>
+        // the spread operator allows up to pass on the rest of props of Todo at once (text, completed)
         <Todo handleClick={() => onTodoClick(todo.id)} key={todo.id} {...todo} />)
       }
     </ul>
