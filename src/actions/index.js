@@ -7,3 +7,10 @@ export const addTodo = (text) => {
     id: nextTodoId++,
   }
 }
+
+export const toggleTodo = (id) => {
+  return {
+    type: 'TOGGLE_TODO',
+    id
+  }
+}

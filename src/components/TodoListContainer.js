@@ -1,5 +1,6 @@
 import TodoList from './TodoList';
 import { connect } from 'react-redux';
+import { toggleTodo } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -9,7 +10,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
   }
 }
 

@@ -1,11 +1,16 @@
 import React from 'react';
+import '../Todo.css'
 
-const Todo = ({text}) => {
+const Todo = ({text, completed, handleClick}) => {
   return (
     <div>
-      <li>
+      <div className='item'
+           onClick={handleClick}
+           style={{
+             textDecoration: completed ? 'line-through' : 'none'
+           }}>
         {text}
-      </li>
+      </div>
     </div>
   )
 };
