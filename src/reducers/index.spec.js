@@ -48,3 +48,17 @@ describe('todos reducer', () => {
         )
   })
 })
+
+describe('filter reducer', () => {
+  it('should return the initial state', () => {
+    expect(
+      filter(undefined, {})
+    ).toEqual('ALL')
+  })
+
+  it('should handle SET_FILTER', () => {
+    expect(
+      filter(undefined, {type: 'SET_FILTER', filter: 'AIRED'})
+    ).toEqual('AIRED')
+  })
+})
