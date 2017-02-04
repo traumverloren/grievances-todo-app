@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TodosContainer from './components/TodosContainer'
+import TodoListContainer from './components/TodoListContainer'
+import AddTodoContainer from './components/AddTodoContainer'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <TodosContainer/>
+        <h2>Grievances Todos</h2>
+        <AddTodoContainer/>
+        <TodoListContainer/>
       </div>
     );
   }
