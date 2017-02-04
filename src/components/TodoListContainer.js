@@ -2,9 +2,24 @@ import TodoList from './TodoList';
 import { connect } from 'react-redux';
 import { toggleTodo } from '../actions'
 
+// this function lets us filter which grievance todos we show in the list
+// using the global filter state
+const filtered = (todos, filter) => {
+  switch (filter) {
+    case 'ALL':
+      return todos
+    case 'UNAIRED':
+      return todos.filter(todo => !todo.completed)
+    case 'AIRED':
+      return todos.filter(todo => todo.completed)
+    default:
+      return todos
+  }
+}
+
 const mapStateToProps = (state) => {
   return {
-    todos: state.todos
+    todos: filtered(state.todos, state.filter)
   };
 };
 

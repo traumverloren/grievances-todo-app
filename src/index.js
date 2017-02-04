@@ -11,9 +11,8 @@ const __REDUX_DEVTOOLS_EXTENSION__ = window.__REDUX_DEVTOOLS_EXTENSION__;
 // then we create a store, and we fold in our devtools, but only if it exists for our browser
 const store = createStore(reducer, __REDUX_DEVTOOLS_EXTENSION__ && __REDUX_DEVTOOLS_EXTENSION__());
 
-store.dispatch(addTodo('oh hai'));
-store.dispatch(addTodo('wheeeee'));
-
+store.dispatch(addTodo('People make me grumpy'));
+store.dispatch(addTodo('Complain about loud neighbors'));
 
 ReactDOM.render(
   <Provider store={store}>

@@ -6,8 +6,9 @@ const Footer = () => {
   return (
     <div>
       <div className='filters'>
-        <FilterContainer filter='ACTIVE'>active</FilterContainer>
-        <FilterContainer filter='AIRED'>aired</FilterContainer>
+        <FilterContainer filter='ALL'>ALL</FilterContainer>
+        <FilterContainer filter='UNAIRED'>UNAIRED</FilterContainer>
+        <FilterContainer filter='AIRED'>AIRED</FilterContainer>
       </div>
     </div>
   )

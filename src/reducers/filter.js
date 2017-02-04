@@ -1,4 +1,4 @@
-const filters = (state = [], action) => {
+const filter = (state = 'ALL', action) => {
   switch(action.type){
     case 'SET_FILTER':
       return action.filter;
@@ -7,4 +7,4 @@ const filters = (state = [], action) => {
   }
 }
 
-export default filters
+export default filter
