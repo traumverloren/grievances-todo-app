@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoListContainer from './components/TodoListContainer'
 import AddTodoContainer from './components/AddTodoContainer'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <h2>Grievances</h2>
         <AddTodoContainer/>
         <TodoListContainer/>
+        <Footer/>
       </div>
     );
   }

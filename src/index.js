@@ -4,12 +4,12 @@ import App from './App';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import todos from './reducers/todos';
+import reducer from './reducers/index';
 import { addTodo } from './actions';
 
 const __REDUX_DEVTOOLS_EXTENSION__ = window.__REDUX_DEVTOOLS_EXTENSION__;
 // then we create a store, and we fold in our devtools, but only if it exists for our browser
-const store = createStore(todos, __REDUX_DEVTOOLS_EXTENSION__ && __REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(reducer, __REDUX_DEVTOOLS_EXTENSION__ && __REDUX_DEVTOOLS_EXTENSION__());
 
 store.dispatch(addTodo('oh hai'));
 store.dispatch(addTodo('wheeeee'));

@@ -1,0 +1,10 @@
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  margin: 15px;
+}
