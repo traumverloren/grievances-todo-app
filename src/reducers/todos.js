@@ -15,10 +15,10 @@ const todos = (state = [], action) => {
         }
 
         // return the item we are looking for but toggle the completed state.
-        return {
-          ...todo,
-          completed: !todo.completed
-        };
+        // don't mutate state!
+        return Object.assign({}, todo, {
+            completed: !state.completed
+          });
       })
     default:
       return state;
